@@ -1,8 +1,8 @@
 plugins {
-    kotlin("jvm") version "1.9.23"
+    kotlin("jvm") version "2.0.10"
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    id("org.sonarqube") version "5.0.0.4638"
     id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
+    id("org.sonarqube") version "5.0.0.4638"
 }
 
 group = "io.github.slimefunguguproject"
@@ -56,7 +56,7 @@ bukkit {
     apiVersion = "1.16"
     authors = listOf("bxx2004", "LobbyTech-MC", "zimzaza4", "haiman233", "ybw0014")
     depend = listOf("Slimefun")
-    softDepend = listOf("GuizhanLibPlugin")
+    softDepend = listOf("GuizhanLibPlugin", "SlimefunTranslation")
 }
 
 sonar {

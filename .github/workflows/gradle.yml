@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   build:
     if: startsWith(github.event.head_commit.message, '[CI skip]') == false
@@ -22,13 +25,11 @@ jobs:
           java-version: 17
           distribution: temurin
 
-      - name: Validate Gradle wrapper
-        uses: gradle/actions/wrapper-validation@v3
+      - name: Setup gradle
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@v3
-        with:
-          arguments: build
+        run: ./gradlew build
 
       - name: Get build artifact ready
         run: mkdir staging && cp build/libs/*.jar staging
@@ -36,5 +37,5 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: dev-build
+          name: preview-build
           path: staging
