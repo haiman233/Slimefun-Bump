@@ -20,6 +20,7 @@ class GetGoldSpade(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : UnplaceableBlock(itemGroup, itemStack, recipeType, recipe) {
+
     init {
         addItemHandler(getToolUseHandler())
     }

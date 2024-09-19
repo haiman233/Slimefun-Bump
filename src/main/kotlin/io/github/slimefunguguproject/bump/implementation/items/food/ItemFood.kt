@@ -23,6 +23,7 @@ abstract class ItemFood(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : UnplaceableBlock(itemGroup, itemStack, recipeType, recipe) {
+
     private val cooldown = Cooldown<UUID>()
 
     override fun getItemHandler() = ItemUseHandler { e: PlayerRightClickEvent ->

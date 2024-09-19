@@ -3,6 +3,7 @@ package io.github.slimefunguguproject.bump.utils.items
 import org.bukkit.inventory.ItemStack
 
 object ValidateUtils {
+
     /**
      * Validate the given [ItemStack] is not `null` or an air item.
      *

@@ -12,6 +12,7 @@ import org.bukkit.plugin.Plugin
 import java.io.File
 
 object ConfigUtils {
+
     fun saveDefaultFile(plugin: Plugin, fileName: String) {
         val file = File(plugin.dataFolder, fileName)
         if (!file.exists()) {

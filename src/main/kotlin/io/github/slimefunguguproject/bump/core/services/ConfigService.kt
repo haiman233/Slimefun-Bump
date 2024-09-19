@@ -7,6 +7,7 @@ import net.guizhanss.guizhanlib.slimefun.addon.AddonConfig
 import org.bukkit.configuration.ConfigurationSection
 
 class ConfigService(private val plugin: Bump) {
+
     private var config: AddonConfig = AddonConfig(plugin, "config.yml")
     private var appraiseConfig: Config = Config(plugin, "appraise.yml")
 
@@ -39,6 +40,7 @@ class ConfigService(private val plugin: Bump) {
         ConfigUtils.saveDefaultFile(plugin, "appraise.yml")
         appraiseConfig.reload()
 
+        // config.yml
         autoUpdate = config.getBoolean("auto-update", true)
         debug = config.getBoolean("debug", false)
         lang = config.getString("lang", "en")!!
@@ -47,6 +49,7 @@ class ConfigService(private val plugin: Bump) {
         appraiserBroadcastEnabled = config.getBoolean("appraiser.broadcast.enabled", true)
         appraiserBroadcastStarRequirement = config.getInt("appraiser.broadcast.star-requirement", 7)
 
+        // appraise.yml
         appraiseTypes = appraiseConfig.configuration.getConfigurationSection("types")
 
         val starsSection = appraiseConfig.configuration.getConfigurationSection("stars")

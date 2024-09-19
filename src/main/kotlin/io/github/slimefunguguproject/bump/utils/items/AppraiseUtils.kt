@@ -11,6 +11,7 @@ import org.bukkit.attribute.AttributeModifier
 import org.bukkit.inventory.ItemStack
 
 object AppraiseUtils {
+
     /**
      * Check if the [ItemStack] is marked as appraisable,
      * which means it can be used in appraisal instrument.

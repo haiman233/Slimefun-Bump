@@ -8,6 +8,7 @@ import org.bukkit.inventory.ItemFlag
 import org.bukkit.inventory.ItemStack
 
 object GeneralUtils {
+
     private const val STAR = "⭐"
 
     /**

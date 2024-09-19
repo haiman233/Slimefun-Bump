@@ -24,6 +24,7 @@ import java.util.function.BiConsumer
  * @see BumpTag
  */
 internal class TagParser(tag: BumpTag) : Keyed {
+
     /**
      * Every [Tag] has a [NamespacedKey].
      * This is the [NamespacedKey] for the resulting [Tag].
@@ -54,11 +55,11 @@ internal class TagParser(tag: BumpTag) : Keyed {
                 error("No values array specified")
             }
 
-            val values = child.getAsJsonArray()
+            val values = child.asJsonArray
 
             for (element in values) {
                 if (element is JsonPrimitive && element.isString) {
-                    parseString(element.getAsString(), materials, tags)
+                    parseString(element.asString, materials, tags)
                 } else {
                     error("Unexpected value format: " + element.javaClass.simpleName + " - " + element)
                 }

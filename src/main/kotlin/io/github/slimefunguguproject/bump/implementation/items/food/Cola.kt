@@ -16,6 +16,7 @@ class Cola(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : ConsumableFood(itemGroup, itemStack, recipeType, recipe) {
+
     override fun applyFoodEffects(p: Player) {
         FoodLevelUtils.add(p, 6)
         p.addPotionEffect(PotionEffect(PotionEffectType.LEVITATION, 600, 3))

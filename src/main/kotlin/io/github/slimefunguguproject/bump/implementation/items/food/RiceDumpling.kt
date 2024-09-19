@@ -16,6 +16,7 @@ class RiceDumpling(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : ItemFood(itemGroup, itemStack, recipeType, recipe) {
+
     override fun applyFoodEffects(p: Player) {
         FoodLevelUtils.add(p, 8)
         p.addPotionEffect(PotionEffect(PotionEffectType.CONDUIT_POWER, 200, 1))

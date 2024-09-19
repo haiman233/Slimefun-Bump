@@ -8,6 +8,7 @@ import java.util.logging.Level
 import kotlin.math.max
 
 class SoundService(private val config: AddonConfig) {
+
     private val soundMap: MutableMap<BumpSound, SoundConfig> = mutableMapOf()
 
     /**

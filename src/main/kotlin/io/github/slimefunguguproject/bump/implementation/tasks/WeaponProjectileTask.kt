@@ -7,6 +7,7 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.Persis
 import org.bukkit.entity.Projectile
 
 object WeaponProjectileTask : Runnable {
+
     private val projectileMap: MutableMap<Projectile, Int> = HashMap()
 
     /**

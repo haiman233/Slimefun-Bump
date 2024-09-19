@@ -12,6 +12,7 @@ import java.util.logging.Level
  * This enum contains almost all configurable sounds in Bump.
  */
 enum class BumpSound(val sound: Sound, val volume: Float, val pitch: Float) {
+
     APPRAISER_FAIL(Sound.ENTITY_VILLAGER_NO, 1.0f, 1.0f),
     APPRAISER_SUCCEED(Sound.ENTITY_VILLAGER_CELEBRATE, 1.0f, 1.0f),
     APPRAISE_TYPE_SELECT(Sound.ENTITY_ARROW_HIT_PLAYER, 1.0f, 1.0f),

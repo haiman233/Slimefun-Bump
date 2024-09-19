@@ -8,6 +8,7 @@ import org.bukkit.inventory.ItemStack
 
 interface CooldownItem : ItemAttribute {
     companion object {
+
         private const val INVALID_ITEMSTACK = "Invalid ItemStack."
     }
 

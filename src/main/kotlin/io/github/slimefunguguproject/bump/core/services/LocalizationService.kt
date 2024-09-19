@@ -21,7 +21,9 @@ class LocalizationService(
     private val plugin: Bump,
     private val jarFile: File
 ) : SlimefunLocalization(plugin) {
+
     companion object {
+
         private const val FOLDER_NAME = "lang"
     }
 

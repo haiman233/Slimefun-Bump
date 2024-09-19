@@ -16,6 +16,7 @@ class Sprite(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : ConsumableFood(itemGroup, itemStack, recipeType, recipe) {
+
     override fun applyFoodEffects(p: Player) {
         FoodLevelUtils.add(p, 6)
         p.addPotionEffect(PotionEffect(PotionEffectType.LUCK, 2000, 4))

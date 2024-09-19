@@ -15,6 +15,7 @@ internal class AppraiserSelector(
     successCallback,
     backCallback
 ) {
+
     override fun getInfoItem() =
         Bump.localization.getGuiItem(MaterialType.Material(Material.NAME_TAG), "APPRAISER_SELECTOR_INFO")
 }

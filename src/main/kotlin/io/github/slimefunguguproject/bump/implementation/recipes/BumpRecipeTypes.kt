@@ -8,6 +8,7 @@ import org.bukkit.Material
 
 
 object BumpRecipeTypes {
+
     val GET_GOLD_SPADE: RecipeType = RecipeType(
         "get_gold_spade".createKey(),
         CustomItemStack(

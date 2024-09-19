@@ -118,6 +118,7 @@ enum class BumpTag : Tag<Material> {
     }
 
     companion object {
+
         /**
          * Get a tag by the name. null if not found.
          */

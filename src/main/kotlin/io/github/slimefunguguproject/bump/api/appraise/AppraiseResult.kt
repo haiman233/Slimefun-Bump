@@ -1,3 +1,5 @@
+@file:Suppress("deprecation")
+
 package io.github.slimefunguguproject.bump.api.appraise
 
 import io.github.slimefunguguproject.bump.Bump
@@ -17,6 +19,7 @@ class AppraiseResult private constructor(
     val type: AppraiseType,
     val result: Map<AppraiseAttribute, Double>,
 ) {
+
     var totalPercent = 0.0
         private set
 
@@ -27,6 +30,7 @@ class AppraiseResult private constructor(
     }
 
     class Builder(private val type: AppraiseType) {
+
         private val result: MutableMap<AppraiseAttribute, Double> = mutableMapOf()
 
         fun attribute(attribute: AppraiseAttribute, value: Double) = apply { result[attribute] = value }

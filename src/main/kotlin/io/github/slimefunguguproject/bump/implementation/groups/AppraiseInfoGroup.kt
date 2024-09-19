@@ -15,6 +15,7 @@ class AppraiseInfoGroup(
     key: NamespacedKey,
     item: ItemStack
 ) : FlexItemGroup(key, item) {
+
     override fun isVisible(player: Player, playerProfile: PlayerProfile, guideMode: SlimefunGuideMode) = false
 
     override fun open(p: Player, profile: PlayerProfile, mode: SlimefunGuideMode) {

@@ -16,6 +16,7 @@ class InstantNoodle(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : ItemFood(itemGroup, itemStack, recipeType, recipe) {
+
     override fun applyFoodEffects(p: Player) {
         FoodLevelUtils.set(p, 20)
         p.addPotionEffect(PotionEffect(PotionEffectType.HEALTH_BOOST, 1500, 9))

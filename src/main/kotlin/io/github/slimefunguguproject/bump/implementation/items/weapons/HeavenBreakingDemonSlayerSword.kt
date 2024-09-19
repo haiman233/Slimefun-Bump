@@ -6,6 +6,7 @@ import io.github.slimefunguguproject.bump.implementation.tasks.WeaponProjectileT
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType
+import net.guizhanss.guizhanlib.minecraft.utils.compatibility.PotionEffectTypeX
 import org.bukkit.entity.DragonFireball
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
@@ -20,12 +21,13 @@ class HeavenBreakingDemonSlayerSword(
     recipe: Array<out ItemStack?>,
     hunger: Int,
 ) : BumpSword(itemGroup, itemStack, recipeType, recipe, hunger) {
+
     override fun onItemUse(p: Player, sword: ItemStack) {
         Bump.localization.sendActionbarMessage(p, "weapon.heaven_breaking_demon_slayer_sword.activated")
 
         p.isGlowing = true
         p.addPotionEffect(PotionEffect(PotionEffectType.SPEED, 300, 3))
-        p.addPotionEffect(PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 300, 3))
+        p.addPotionEffect(PotionEffect(PotionEffectTypeX.RESISTANCE, 300, 3))
 
         object : BukkitRunnable() {
             var count: Int = 3

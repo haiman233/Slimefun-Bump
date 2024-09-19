@@ -22,7 +22,9 @@ class ItemConverter(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : TickingMenuBlock(itemGroup, item, recipeType, recipe) {
+
     companion object {
+
         // gui
         private const val INFO_SLOT = 4
 

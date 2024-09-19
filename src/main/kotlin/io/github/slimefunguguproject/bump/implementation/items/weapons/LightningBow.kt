@@ -17,6 +17,7 @@ class LightningBow(
     recipe: Array<out ItemStack?>,
     hunger: Int,
 ) : BumpBow(itemGroup, itemStack, recipeType, recipe, hunger) {
+
     override fun getItemHandler() = BowUseHandler { e: EntityShootBowEvent, p: Player, item: ItemStack ->
         e.isCancelled = true
         val target = p.getTargetBlock(null, 200)

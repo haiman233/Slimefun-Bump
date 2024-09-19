@@ -17,6 +17,7 @@ class SpicyStrips(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : ConsumableFood(itemGroup, itemStack, recipeType, recipe) {
+
     override fun applyFoodEffects(p: Player) {
         FoodLevelUtils.add(p, 2)
         p.addPotionEffect(PotionEffect(PotionEffectType.ABSORPTION, 200, 2))

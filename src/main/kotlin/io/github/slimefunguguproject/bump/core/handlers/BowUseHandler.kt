@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack
 import java.util.Optional
 
 fun interface BowUseHandler : ItemHandler {
+
     fun onUse(e: EntityShootBowEvent, p: Player, bow: ItemStack)
 
     override fun validate(item: SlimefunItem): Optional<IncompatibleItemHandlerException> {

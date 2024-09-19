@@ -16,6 +16,7 @@ class ChewingGum(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : ItemFood(itemGroup, itemStack, recipeType, recipe) {
+
     override fun applyFoodEffects(p: Player) {
         FoodLevelUtils.add(p, 10)
         p.addPotionEffect(PotionEffect(PotionEffectType.SLOW, 600, 4))

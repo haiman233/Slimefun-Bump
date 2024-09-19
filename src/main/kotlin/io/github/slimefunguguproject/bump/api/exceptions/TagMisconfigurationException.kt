@@ -5,9 +5,6 @@ import org.bukkit.NamespacedKey
 import javax.annotation.ParametersAreNonnullByDefault
 
 class TagMisconfigurationException : Exception {
-    companion object {
-        private val serialVersionUID = 1145141919810L
-    }
 
     /**
      * This constructs a new [TagMisconfigurationException] for the given
@@ -29,4 +26,10 @@ class TagMisconfigurationException : Exception {
     @ParametersAreNonnullByDefault
     constructor(key: NamespacedKey, cause: Throwable)
         : super("Tag '" + key + "' has been misconfigured (" + cause.message + ')', cause)
+
+
+    companion object {
+
+        private val serialVersionUID = 1145141919810L
+    }
 }

@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     kotlin("jvm") version "2.0.10"
     id("com.github.johnrengelman.shadow") version "8.1.1"
@@ -12,7 +14,7 @@ description = "Bump"
 repositories {
     mavenLocal()
     mavenCentral()
-    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
     maven("https://jitpack.io")
 }
@@ -20,22 +22,22 @@ repositories {
 dependencies {
     library(kotlin("stdlib"))
     library(kotlin("reflect"))
-    compileOnly("org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT")
-    compileOnly("com.github.Slimefun:Slimefun4:RC-37")
-    implementation("net.guizhanss:GuizhanLib-api:1.7.6")
+    compileOnly("io.papermc.paper:paper-api:1.20.6-R0.1-SNAPSHOT")
+    compileOnly("com.github.Slimefun:Slimefun4:e02a0f61d1")
+    implementation("net.guizhanss:GuizhanLib-api:1.8.1")
     implementation("dev.sefiraat:SefiLib:0.2.6")
-    implementation("org.bstats:bstats-bukkit:3.0.2")
+    implementation("org.bstats:bstats-bukkit:3.0.3")
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 tasks.compileKotlin {
-    kotlinOptions {
+    compilerOptions {
         javaParameters = true
-        jvmTarget = "17"
+        jvmTarget = JvmTarget.JVM_21
     }
 }
 
@@ -53,7 +55,7 @@ tasks.shadowJar {
 
 bukkit {
     main = "io.github.slimefunguguproject.bump.Bump"
-    apiVersion = "1.16"
+    apiVersion = "1.18"
     authors = listOf("bxx2004", "LobbyTech-MC", "zimzaza4", "haiman233", "ybw0014")
     depend = listOf("Slimefun")
     softDepend = listOf("GuizhanLibPlugin", "SlimefunTranslation")

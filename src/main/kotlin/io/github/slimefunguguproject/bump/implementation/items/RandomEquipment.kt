@@ -15,7 +15,9 @@ class RandomEquipment(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>,
 ) : SlimefunItem(itemGroup, itemStack, recipeType, recipe), AppraisableItem {
+
     override fun postRegister() {
+        if (isDisabled) return
         val compressor: Compressor = (getById("COMPRESSOR") ?: return) as Compressor
         compressor.addRecipe(arrayOf(item), BumpItems.COMPRESSED_RANDOM_EQUIPMENT)
     }

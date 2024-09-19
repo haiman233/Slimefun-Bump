@@ -9,6 +9,7 @@ import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun
 
 object JsonUtils {
+
     /**
      * This method parses JSON from the [JsonReader].
      *

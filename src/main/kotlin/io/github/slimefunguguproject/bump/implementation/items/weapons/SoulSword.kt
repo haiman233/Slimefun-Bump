@@ -18,6 +18,7 @@ class SoulSword(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>,
 ) : SimpleSlimefunItem<ItemUseHandler>(itemGroup, itemStack, recipeType, recipe) {
+
     override fun getItemHandler() = ItemUseHandler { e: PlayerRightClickEvent ->
         val p = e.player
         val health = p.health

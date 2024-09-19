@@ -6,6 +6,7 @@ import org.bukkit.inventory.ItemFlag
 import org.bukkit.inventory.ItemStack
 
 class DisplayItemBuilder {
+
     var material: MaterialType by RequiredProperty()
     var name: String by RequiredProperty()
     var lore: List<String> by RequiredProperty()

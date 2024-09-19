@@ -5,6 +5,7 @@ import org.bukkit.NamespacedKey
 import java.util.Locale
 
 object Keys {
+
     val APPRAISABLE = "appraisable".createKey()
     val APPRAISE_LEVEL = "appraise_level".createKey()
     val APPRAISE_VERSION = "appraise_version".createKey()

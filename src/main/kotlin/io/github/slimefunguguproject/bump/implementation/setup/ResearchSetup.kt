@@ -7,6 +7,7 @@ import io.github.thebusybiscuit.slimefun4.api.researches.Research
 import org.bukkit.inventory.ItemStack
 
 object ResearchSetup {
+
     private var researchId = 114514
 
     fun setup() {

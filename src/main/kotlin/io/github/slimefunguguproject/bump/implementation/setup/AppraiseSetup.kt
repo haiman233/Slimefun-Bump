@@ -14,6 +14,7 @@ import org.bukkit.inventory.EquipmentSlot
 import java.util.logging.Level
 
 object AppraiseSetup {
+
     fun setup() {
         setupTypes()
         setupStars()

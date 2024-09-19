@@ -23,7 +23,9 @@ abstract class SimpleMenuBlock(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : MenuBlock(itemGroup, item, recipeType, recipe), EnergyNetComponent {
+
     companion object {
+
         // gui
         private val BACKGROUND = intArrayOf(
             0, 4, 8, 9, 17, 18, 22, 26

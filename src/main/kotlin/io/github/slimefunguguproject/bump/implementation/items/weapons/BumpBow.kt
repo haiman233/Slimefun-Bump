@@ -19,6 +19,7 @@ abstract class BumpBow(
     recipe: Array<out ItemStack?>,
     hunger: Int
 ) : SimpleSlimefunItem<BowUseHandler>(itemGroup, itemStack, recipeType, recipe), DamageableItem, CostHungerItem {
+
     init {
         require(hunger in 0..20) { "Hunger cost must be between 0 and 20" }
     }

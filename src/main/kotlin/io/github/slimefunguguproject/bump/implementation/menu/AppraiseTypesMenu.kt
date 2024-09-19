@@ -27,7 +27,9 @@ abstract class AppraiseTypesMenu(
     private val successCallback: Consumer<AppraiseType>,
     private val backCallback: Runnable
 ) {
+
     companion object {
+
         private const val PAGE_SIZE = 36
 
         private const val GUIDE_BACK = 1
@@ -64,7 +66,7 @@ abstract class AppraiseTypesMenu(
             chestMenu.addItem(slot, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler())
         }
 
-        chestMenu.setEmptySlotsClickable(false)
+        chestMenu.isEmptySlotsClickable = false
         displayCollection(p, chestMenu, 1)
         chestMenu.open(p)
     }

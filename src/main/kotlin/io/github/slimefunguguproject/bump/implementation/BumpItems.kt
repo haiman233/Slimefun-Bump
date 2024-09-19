@@ -38,6 +38,7 @@ import org.bukkit.inventory.ItemStack
 
 
 object BumpItems {
+
     // <editor-fold desc="Materials">
     val PHOTOSYNTHETIC_ENERGY = buildSlimefunItem<BumpMaterial> {
         id = "PHOTOSYNTHETIC_ENERGY"

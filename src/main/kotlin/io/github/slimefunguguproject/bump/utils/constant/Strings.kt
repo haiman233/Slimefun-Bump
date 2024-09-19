@@ -3,6 +3,7 @@ package io.github.slimefunguguproject.bump.utils.constant
 import org.bukkit.ChatColor
 
 object Strings {
+
     val CHECK = ChatColor.GREEN.toString() + "✔"
     val CROSS = ChatColor.RED.toString() + "✘"
 

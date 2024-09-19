@@ -22,39 +22,6 @@ import java.util.logging.Level
 class Bump : AbstractAddon(
     "SlimefunGuguProject", "Bump", "main", "options.auto-update"
 ) {
-    companion object {
-        const val DEFAULT_LANG = "en"
-
-        lateinit var instance: Bump
-            private set
-        lateinit var configService: ConfigService
-            private set
-        lateinit var localization: LocalizationService
-            private set
-        lateinit var soundService: SoundService
-            private set
-        lateinit var integrationService: IntegrationService
-            private set
-
-        fun scheduler() = getScheduler()
-
-        fun sfTickCount() = getSlimefunTickCount()
-
-        fun log(level: Level, message: String) {
-            instance.logger.log(level, message)
-        }
-
-        fun log(level: Level, ex: Throwable, message: String) {
-            instance.logger.log(level, ex) { message }
-        }
-
-        fun debug(message: String) {
-            if (!Companion::configService.isInitialized || !configService.debug) {
-                return
-            }
-            log(Level.INFO, "[DEBUG] $message")
-        }
-    }
 
     override fun enable() {
         instance = this
@@ -130,5 +97,40 @@ class Bump : AbstractAddon(
         val metrics = Metrics(this, 14870)
         metrics.addCustomChart(SimplePie("server_language") { configService.lang })
         metrics.addCustomChart(SimplePie("enable_research") { if (configService.enableResearches) "enabled" else "disabled" })
+    }
+
+    companion object {
+
+        const val DEFAULT_LANG = "en"
+
+        lateinit var instance: Bump
+            private set
+        lateinit var configService: ConfigService
+            private set
+        lateinit var localization: LocalizationService
+            private set
+        lateinit var soundService: SoundService
+            private set
+        lateinit var integrationService: IntegrationService
+            private set
+
+        fun scheduler() = getScheduler()
+
+        fun sfTickCount() = getSlimefunTickCount()
+
+        fun log(level: Level, message: String) {
+            instance.logger.log(level, message)
+        }
+
+        fun log(level: Level, ex: Throwable, message: String) {
+            instance.logger.log(level, ex) { message }
+        }
+
+        fun debug(message: String) {
+            if (!Companion::configService.isInitialized || !configService.debug) {
+                return
+            }
+            log(Level.INFO, "[DEBUG] $message")
+        }
     }
 }

@@ -8,6 +8,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack
 import io.github.thebusybiscuit.slimefun4.api.items.settings.IntRangeSetting
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType
+import io.github.thebusybiscuit.slimefun4.core.attributes.NotPlaceable
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler
 import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem
 import org.bukkit.entity.Player
@@ -19,7 +20,9 @@ abstract class BumpSword(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>,
     hunger: Int,
-) : SimpleSlimefunItem<ItemUseHandler>(itemGroup, itemStack, recipeType, recipe), CostHungerItem, CooldownItem {
+) : SimpleSlimefunItem<ItemUseHandler>(itemGroup, itemStack, recipeType, recipe), NotPlaceable, CostHungerItem,
+    CooldownItem {
+
     init {
         require(hunger in 0..20) { "Hunger cost must be between 0 and 20" }
     }

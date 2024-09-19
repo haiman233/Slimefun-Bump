@@ -25,9 +25,6 @@ data class AppraiseType internal constructor(
     val validSlimefunItemIds: Set<String>,
     val addon: SlimefunAddon,
 ) {
-    companion object {
-        fun getByKey(key: NamespacedKey) = BumpRegistry.appraiseTypeKeys[key]
-    }
 
     fun hasPermission(p: Player) = permission == null || p.hasPermission(permission)
 
@@ -78,6 +75,7 @@ data class AppraiseType internal constructor(
     class Builder(
         private val key: NamespacedKey,
     ) {
+
         private var name: String = key.key
         private var description: List<String> = emptyList()
         private var permission: String? = null
@@ -159,6 +157,11 @@ data class AppraiseType internal constructor(
 
             return appraiseType
         }
+    }
+
+    companion object {
+
+        fun getByKey(key: NamespacedKey) = BumpRegistry.appraiseTypeKeys[key]
     }
 }
 

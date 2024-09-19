@@ -6,6 +6,7 @@ import org.bukkit.GameMode
 import org.bukkit.entity.Player
 
 interface CostHungerItem : ItemAttribute {
+
     /**
      * This variable returns the hunger cost of the item.
      */

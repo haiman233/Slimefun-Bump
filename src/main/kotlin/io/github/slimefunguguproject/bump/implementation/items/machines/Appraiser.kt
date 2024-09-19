@@ -31,7 +31,9 @@ class Appraiser(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : SimpleMenuBlock(itemGroup, item, recipeType, recipe) {
+
     companion object {
+
         // energy
         const val ENERGY_CONSUMPTION = 114514
 

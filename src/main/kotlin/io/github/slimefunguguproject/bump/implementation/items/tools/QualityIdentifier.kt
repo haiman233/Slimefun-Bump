@@ -37,7 +37,9 @@ class QualityIdentifier(
     recipeType: RecipeType,
     recipe: Array<out ItemStack?>
 ) : LimitedUseItem(itemGroup, itemStack, recipeType, recipe) {
+
     companion object {
+
         const val MAX_USES = 5
 
         // gui
@@ -82,7 +84,7 @@ class QualityIdentifier(
     }
 
     private fun createMenu(p: Player, menu: ChestMenu, paperItemStack: ItemStack) {
-        menu.setPlayerInventoryClickable(true)
+        menu.isPlayerInventoryClickable = true
 
         // Open sound
         menu.addMenuOpeningHandler { BumpSound.QUALITY_IDENTIFIER_OPEN.playFor(p) }

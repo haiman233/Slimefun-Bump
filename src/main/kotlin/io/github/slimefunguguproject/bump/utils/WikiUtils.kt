@@ -5,6 +5,7 @@ import org.bukkit.plugin.Plugin
 import java.util.logging.Level
 
 object WikiUtils {
+
     fun setupJson() {
         try {
             val clazz = Class.forName("net.guizhanss.slimefun4.utils.WikiUtils")

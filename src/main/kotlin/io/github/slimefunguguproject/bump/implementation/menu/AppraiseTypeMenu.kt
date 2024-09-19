@@ -23,7 +23,9 @@ class AppraiseTypeMenu(
     private val appraiseType: AppraiseType,
     private val backCallback: Runnable,
 ) {
+
     companion object {
+
         private const val GUIDE_BACK = 0
 
         private const val INFO_SLOT = 4
@@ -47,7 +49,7 @@ class AppraiseTypeMenu(
     }
 
     private fun setupMenu(player: Player, menu: ChestMenu) {
-        menu.setEmptySlotsClickable(false)
+        menu.isEmptySlotsClickable = false
 
         // Sound
         menu.addMenuOpeningHandler { p -> SoundEffect.GUIDE_BUTTON_CLICK_SOUND.playFor(p) }

@@ -6,6 +6,7 @@ import io.github.slimefunguguproject.bump.implementation.tasks.WeaponProjectileT
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType
+import net.guizhanss.guizhanlib.minecraft.utils.compatibility.ParticleX
 import org.bukkit.Particle
 import org.bukkit.entity.Player
 import org.bukkit.entity.SmallFireball
@@ -18,6 +19,7 @@ class DemonSlayerSword(
     recipe: Array<out ItemStack?>,
     hunger: Int,
 ) : BumpSword(itemGroup, itemStack, recipeType, recipe, hunger) {
+
     override fun onItemUse(p: Player, sword: ItemStack) {
         Bump.localization.sendActionbarMessage(p, "weapon.demon_slayer_sword")
 
@@ -26,7 +28,7 @@ class DemonSlayerSword(
         for (i in 0..19) {
             val projectile = p.launchProjectile(SmallFireball::class.java)
             WeaponProjectileTask.track(projectile)
-            p.spawnParticle(Particle.ENCHANTMENT_TABLE, p.location, 1)
+            p.spawnParticle(ParticleX.ENCHANT, p.location, 1)
         }
     }
 }

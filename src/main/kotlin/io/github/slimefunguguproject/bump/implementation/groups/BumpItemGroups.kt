@@ -15,6 +15,7 @@ import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 
 object BumpItemGroups {
+
     val MAIN: SimpleFlexGroup = SimpleFlexGroup(
         Bump.instance,
         Bump.localization.getItemGroupName("main"),

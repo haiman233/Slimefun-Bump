@@ -12,6 +12,7 @@ internal class AppraiseInfoMenu(
     successCallback: Consumer<AppraiseType>,
     backCallback: Runnable
 ) : AppraiseTypesMenu(name, successCallback, backCallback) {
+
     override fun getInfoItem() =
         Bump.localization.getGuiItem(MaterialType.Material(Material.NAME_TAG), "APPRAISE_MENU_INFO")
 }

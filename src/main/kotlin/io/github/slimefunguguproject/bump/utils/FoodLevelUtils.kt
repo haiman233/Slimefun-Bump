@@ -7,6 +7,7 @@ import org.bukkit.event.entity.FoodLevelChangeEvent
 import kotlin.math.min
 
 object FoodLevelUtils {
+
     /**
      * This method calls [FoodLevelChangeEvent] and add [Player]'s
      * food level if [Player]'s [GameMode] is not creative/spectator and

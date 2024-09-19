@@ -7,9 +7,6 @@ data class AppraiseAttribute(
     val min: Double,
     val max: Double,
 ) {
-    companion object {
-        const val UNSET_WEIGHT = -1.0
-    }
 
     constructor(attribute: Attribute, min: Double, max: Double, weight: Double) : this(attribute, min, max) {
         this.weight = weight
@@ -56,4 +53,9 @@ data class AppraiseAttribute(
      * @return The weighted percent of the result value.
      */
     fun getWeightedPercent(value: Double) = getPercent(value) * weight / 100.0
+
+    companion object {
+
+        const val UNSET_WEIGHT = -1.0
+    }
 }
