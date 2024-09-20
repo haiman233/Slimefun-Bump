@@ -32,6 +32,7 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder
+import net.guizhanss.guizhanlib.minecraft.utils.compatibility.EnchantmentX
 import org.bukkit.Material
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.inventory.ItemStack
@@ -437,7 +438,7 @@ object BumpItems {
             // @formatter:on
         )
         postCreate = {
-            it.addUnsafeEnchantment(Enchantment.ARROW_DAMAGE, 5)
+            it.addUnsafeEnchantment(EnchantmentX.POWER, 5)
         }
     }
 
@@ -452,7 +453,7 @@ object BumpItems {
             null, PEACH_WOOD, SlimefunItems.NECROTIC_SKULL,
         )
         postCreate = {
-            it.addUnsafeEnchantment(Enchantment.ARROW_DAMAGE, 5)
+            it.addUnsafeEnchantment(EnchantmentX.POWER, 5)
         }
     }
 
@@ -467,7 +468,7 @@ object BumpItems {
             null, ItemStack(Material.STICK), null
         )
         postCreate = {
-            it.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 2)
+            it.addUnsafeEnchantment(EnchantmentX.SHARPNESS, 2)
         }
     }
 
@@ -482,7 +483,7 @@ object BumpItems {
             null, SlimefunItems.GRANDMAS_WALKING_STICK, null
         )
         postCreate = {
-            it.addUnsafeEnchantment(Enchantment.DURABILITY, 10)
+            it.addUnsafeEnchantment(EnchantmentX.UNBREAKING, 10)
         }
     }
 
@@ -497,7 +498,7 @@ object BumpItems {
             null, ItemStack(Material.STICK), null
         )
         postCreate = {
-            it.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 5)
+            it.addUnsafeEnchantment(EnchantmentX.SHARPNESS, 5)
             it.addUnsafeEnchantment(Enchantment.MENDING, 1)
         }
     }
@@ -514,7 +515,7 @@ object BumpItems {
         )
         postCreate = {
             it.addUnsafeEnchantment(Enchantment.KNOCKBACK, 5)
-            it.addUnsafeEnchantment(Enchantment.DURABILITY, 3)
+            it.addUnsafeEnchantment(EnchantmentX.UNBREAKING, 3)
         }
     }
 
@@ -529,8 +530,8 @@ object BumpItems {
             null, null, null
         )
         postCreate = {
-            it.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 2)
-            it.addUnsafeEnchantment(Enchantment.DURABILITY, 1)
+            it.addUnsafeEnchantment(EnchantmentX.SHARPNESS, 2)
+            it.addUnsafeEnchantment(EnchantmentX.UNBREAKING, 1)
         }
     }
 
@@ -545,8 +546,8 @@ object BumpItems {
             SlimefunItems.AIR_RUNE, SlimefunItems.MAGIC_LUMP_2, null
         )
         postCreate = {
-            it.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 1)
-            it.addUnsafeEnchantment(Enchantment.DURABILITY, 1)
+            it.addUnsafeEnchantment(EnchantmentX.SHARPNESS, 1)
+            it.addUnsafeEnchantment(EnchantmentX.UNBREAKING, 1)
             it.addUnsafeEnchantment(Enchantment.SWEEPING_EDGE, 1)
         }
     }
@@ -562,8 +563,8 @@ object BumpItems {
             SlimefunItems.ENDER_RUNE, SlimefunItems.MAGIC_LUMP_2, null
         )
         postCreate = {
-            it.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 1)
-            it.addUnsafeEnchantment(Enchantment.DURABILITY, 1)
+            it.addUnsafeEnchantment(EnchantmentX.SHARPNESS, 1)
+            it.addUnsafeEnchantment(EnchantmentX.UNBREAKING, 1)
             it.addUnsafeEnchantment(Enchantment.SWEEPING_EDGE, 1)
         }
     }
@@ -579,8 +580,8 @@ object BumpItems {
             null, null, null
         )
         postCreate = {
-            it.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 5)
-            it.addUnsafeEnchantment(Enchantment.DURABILITY, 5)
+            it.addUnsafeEnchantment(EnchantmentX.SHARPNESS, 5)
+            it.addUnsafeEnchantment(EnchantmentX.UNBREAKING, 5)
             it.addUnsafeEnchantment(Enchantment.LOYALTY, 5)
         }
     }

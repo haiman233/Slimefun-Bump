@@ -1,3 +1,5 @@
+@file:Suppress("deprecation")
+
 package io.github.slimefunguguproject.bump.implementation.groups
 
 import dev.sefiraat.sefilib.slimefun.itemgroup.DummyItemGroup

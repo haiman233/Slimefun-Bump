@@ -7,6 +7,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType
 import io.github.thebusybiscuit.slimefun4.core.handlers.ToolUseHandler
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock
+import net.guizhanss.guizhanlib.minecraft.utils.compatibility.EnchantmentX
 import net.guizhanss.guizhanlib.utils.RandomUtil
 import org.bukkit.Material
 import org.bukkit.enchantments.Enchantment
@@ -29,7 +30,7 @@ class GetGoldSpade(
         ToolUseHandler { e: BlockBreakEvent, item: ItemStack, _: Int, drops: MutableList<ItemStack> ->
             if (e.block.type != Material.SAND) return@ToolUseHandler
 
-            val luckLevel = min(item.getEnchantmentLevel(Enchantment.LUCK), 5)
+            val luckLevel = min(item.getEnchantmentLevel(EnchantmentX.FORTUNE), 5)
             if (!RandomUtil.testChance(30 + luckLevel * 10, 100)) return@ToolUseHandler
 
             if (BumpItems.BROKEN_GOLD_COIN.item?.isDisabledIn(e.block.world) == true) return@ToolUseHandler

@@ -1,3 +1,5 @@
+@file:Suppress("deprecation")
+
 package io.github.slimefunguguproject.bump.implementation.setup
 
 import io.github.slimefunguguproject.bump.Bump

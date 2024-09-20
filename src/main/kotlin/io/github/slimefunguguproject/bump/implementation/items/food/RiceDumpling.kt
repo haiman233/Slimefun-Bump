@@ -4,6 +4,7 @@ import io.github.slimefunguguproject.bump.utils.FoodLevelUtils
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType
+import net.guizhanss.guizhanlib.minecraft.utils.compatibility.PotionEffectTypeX
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 import org.bukkit.potion.PotionEffect
@@ -21,8 +22,8 @@ class RiceDumpling(
         FoodLevelUtils.add(p, 8)
         p.addPotionEffect(PotionEffect(PotionEffectType.CONDUIT_POWER, 200, 1))
         p.addPotionEffect(PotionEffect(PotionEffectType.GLOWING, 1000, 1))
-        p.addPotionEffect(PotionEffect(PotionEffectType.INCREASE_DAMAGE, 200, 1))
-        p.addPotionEffect(PotionEffect(PotionEffectType.FAST_DIGGING, 200, 2))
+        p.addPotionEffect(PotionEffect(PotionEffectTypeX.STRENGTH, 200, 1))
+        p.addPotionEffect(PotionEffect(PotionEffectTypeX.HASTE, 200, 2))
         p.addPotionEffect(PotionEffect(PotionEffectType.LUCK, 2000, 2))
     }
 }

@@ -1,3 +1,5 @@
+@file:Suppress("deprecation")
+
 package io.github.slimefunguguproject.bump.utils.items
 
 import io.github.slimefunguguproject.bump.Bump
@@ -5,6 +7,7 @@ import io.github.slimefunguguproject.bump.api.appraise.AppraiseType
 import io.github.slimefunguguproject.bump.utils.constant.Keys
 import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI
 import net.guizhanss.guizhanlib.minecraft.utils.ChatUtil
+import net.guizhanss.guizhanlib.minecraft.utils.compatibility.AttributeX
 import org.bukkit.ChatColor
 import org.bukkit.attribute.Attribute
 import org.bukkit.attribute.AttributeModifier
@@ -68,7 +71,7 @@ object AppraiseUtils {
 
     fun getOperation(attribute: Attribute): AttributeModifier.Operation {
         return when (attribute) {
-            Attribute.GENERIC_MOVEMENT_SPEED, Attribute.HORSE_JUMP_STRENGTH -> AttributeModifier.Operation.ADD_SCALAR
+            Attribute.GENERIC_MOVEMENT_SPEED, AttributeX.GENERIC_JUMP_STRENGTH -> AttributeModifier.Operation.ADD_SCALAR
             else -> AttributeModifier.Operation.ADD_NUMBER
         }
     }

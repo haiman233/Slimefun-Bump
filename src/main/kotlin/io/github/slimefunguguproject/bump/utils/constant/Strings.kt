@@ -1,3 +1,5 @@
+@file:Suppress("deprecation")
+
 package io.github.slimefunguguproject.bump.utils.constant
 
 import org.bukkit.ChatColor

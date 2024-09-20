@@ -12,6 +12,8 @@ import io.github.slimefunguguproject.bump.implementation.setup.ResearchSetup
 import io.github.slimefunguguproject.bump.implementation.tasks.WeaponProjectileTask
 import io.github.slimefunguguproject.bump.utils.WikiUtils
 import io.github.slimefunguguproject.bump.utils.tags.BumpTag
+import net.byteflux.libby.BukkitLibraryManager
+import net.byteflux.libby.Library
 import net.guizhanss.guizhanlib.slimefun.addon.AbstractAddon
 import net.guizhanss.guizhanlib.slimefun.addon.AddonConfig
 import org.bstats.bukkit.Metrics
@@ -22,6 +24,26 @@ import java.util.logging.Level
 class Bump : AbstractAddon(
     "SlimefunGuguProject", "Bump", "main", "options.auto-update"
 ) {
+
+    override fun load() {
+        // check if there is central repo prop defined
+        val centralRepo = System.getProperty("centralRepository") ?: "https://repo1.maven.org/maven2/"
+
+        logger.info("Loading libraries, please wait...")
+        logger.info("If you stuck here for a long time (>30s), try to specify a mirror repository by adding -DcentralRepository=<url> to your JVM arguments.")
+
+        // download libs
+        val manager = BukkitLibraryManager(this, "libraries")
+        manager.addRepository(centralRepo)
+        manager.loadLibrary(
+            Library.builder().groupId("org.jetbrains.kotlin").artifactId("kotlin-stdlib").version("2.0.20").build()
+        )
+        manager.loadLibrary(
+            Library.builder().groupId("org.jetbrains.kotlin").artifactId("kotlin-reflect").version("2.0.20").build()
+        )
+
+        logger.info("Loaded all required libraries.")
+    }
 
     override fun enable() {
         instance = this

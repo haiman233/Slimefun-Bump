@@ -1,6 +1,8 @@
 package io.github.slimefunguguproject.bump.utils
 
 import io.github.slimefunguguproject.bump.utils.items.ValidateUtils
+import net.guizhanss.guizhanlib.minecraft.utils.MinecraftVersionUtil
+import net.guizhanss.guizhanlib.minecraft.utils.compatibility.EnchantmentX
 import net.guizhanss.guizhanlib.utils.StringUtil
 import org.bukkit.Material
 import org.bukkit.enchantments.Enchantment
@@ -46,8 +48,12 @@ object GeneralUtils {
         }
 
         val itemMeta = item.itemMeta!!
-        itemMeta.addEnchant(Enchantment.LUCK, 1, true)
-        itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS)
+        if (MinecraftVersionUtil.isAtLeast(20, 5)) {
+            itemMeta.setEnchantmentGlintOverride(true)
+        } else {
+            itemMeta.addEnchant(EnchantmentX.LUCK_OF_THE_SEA, 1, true)
+            itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS)
+        }
         item.setItemMeta(itemMeta)
     }
 
