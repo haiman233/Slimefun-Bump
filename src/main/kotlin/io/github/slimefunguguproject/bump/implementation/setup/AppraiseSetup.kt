@@ -26,7 +26,7 @@ object AppraiseSetup {
         Bump.log(Level.INFO, "Loading appraise types...")
 
         val config = Bump.configService.appraiseTypes
-        if (config == null) {
+        if (config == null || config.getKeys(false).isEmpty()) {
             Bump.log(Level.WARNING, "No appraise types found in config, some features may not work.")
             return
         }

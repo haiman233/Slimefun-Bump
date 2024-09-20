@@ -388,7 +388,7 @@ lores:
   per-use: "&7per use"
   not-appraised: "&b&k|&b- &7&oNot appraised"
   appraised: "&b&k|&b- &7&oAppraised &b| &dLevel: &e&l{0}"
-  any-random-equipment: "&fAny random equipment"
+  any-random-equipment: "&fAny \"Random Equipment\""
   appraise_info:
     equipment_type:
       name: "&aAcceptable equipment type: &b{0}"
