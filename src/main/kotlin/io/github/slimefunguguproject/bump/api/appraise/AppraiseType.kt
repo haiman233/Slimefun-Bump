@@ -7,6 +7,7 @@ import net.guizhanss.guizhanlib.utils.RandomUtil
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.attribute.Attribute
+import org.bukkit.attribute.AttributeModifier.Operation
 import org.bukkit.entity.Player
 import org.bukkit.inventory.EquipmentSlot
 import org.bukkit.inventory.ItemStack
@@ -95,9 +96,10 @@ data class AppraiseType internal constructor(
             attribute: Attribute,
             min: Double,
             max: Double,
-            weight: Double = AppraiseAttribute.UNSET_WEIGHT
+            weight: Double = AppraiseAttribute.UNSET_WEIGHT,
+            operation: Operation = Operation.ADD_NUMBER
         ) = apply {
-            attributes.add(AppraiseAttribute(attribute, min, max, weight))
+            attributes.add(AppraiseAttribute(attribute, min, max, weight, operation))
             if (weight != AppraiseAttribute.UNSET_WEIGHT) {
                 usedPercent += weight
             }
@@ -118,6 +120,9 @@ data class AppraiseType internal constructor(
         fun validSlimefunItemIds(validSlimefunItemIds: Collection<String>) =
             apply { this.validSlimefunItemIds.addAll(validSlimefunItemIds) }
 
+        /**
+         * Build and register.
+         */
         fun build(addon: SlimefunAddon): AppraiseType {
             if (BumpRegistry.appraiseTypeKeys.containsKey(key)) {
                 error("AppraiseType with key \"$key\" already exists.")

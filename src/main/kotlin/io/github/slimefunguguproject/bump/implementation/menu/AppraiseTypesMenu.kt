@@ -2,11 +2,11 @@
 
 package io.github.slimefunguguproject.bump.implementation.menu
 
-import io.github.bakedlibs.dough.items.CustomItemStack
 import io.github.slimefunguguproject.bump.api.appraise.AppraiseType
 import io.github.slimefunguguproject.bump.core.BumpRegistry
 import io.github.thebusybiscuit.slimefun4.core.services.sounds.SoundEffect
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu
 import org.bukkit.ChatColor

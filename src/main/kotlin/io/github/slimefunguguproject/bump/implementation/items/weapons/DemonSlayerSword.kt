@@ -7,7 +7,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType
 import net.guizhanss.guizhanlib.minecraft.utils.compatibility.ParticleX
-import org.bukkit.Particle
 import org.bukkit.entity.Player
 import org.bukkit.entity.SmallFireball
 import org.bukkit.inventory.ItemStack

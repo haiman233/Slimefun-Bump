@@ -26,7 +26,9 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.6-R0.1-SNAPSHOT")
     compileOnly("com.github.Slimefun:Slimefun4:e02a0f61d1")
     implementation("net.guizhanss:GuizhanLib-api:1.8.1")
-    implementation("dev.sefiraat:SefiLib:0.2.6")
+    implementation("dev.sefiraat:SefiLib:0.2.6") {
+        exclude("io.github.baked-libs", "dough-api")
+    }
     implementation("org.bstats:bstats-bukkit:3.0.3")
     implementation("net.byteflux:libby-bukkit:1.3.1")
 }
@@ -44,14 +46,15 @@ tasks.compileKotlin {
 }
 
 tasks.shadowJar {
-    fun doRelocate(from: String) {
+    fun doRelocate(from: String, to: String? = null) {
         val last = from.split(".").last()
-        relocate(from, "io.github.slimefunguguproject.bump.libs.$last")
+        relocate(from, "io.github.slimefunguguproject.bump.libs.${to ?: last}")
     }
     doRelocate("net.guizhanss.guizhanlib")
     doRelocate("dev.sefiraat.sefilib")
     doRelocate("org.bstats")
     doRelocate("net.byteflux.libby")
+    doRelocate("io.papermc.lib", "paperlib")
     minimize()
     archiveClassifier = ""
 }

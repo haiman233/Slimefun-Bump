@@ -11,8 +11,10 @@ stars:
   30: 2
   10: 1
 types:
-  sword:
+  sword_v1:
     enabled: true
+    conditions:
+      - "v < 1.20.5"
     name: "Sword"
     description:
       - "Any Slimefun sword."
@@ -44,8 +46,10 @@ types:
         max: 12
         weight: 10
 
-  armor:
+  armor_v1:
     enabled: true
+    conditions:
+      - "v < 1.20.5"
     name: "Armor"
     description:
       - "Any Slimefun armor."
@@ -73,18 +77,16 @@ types:
       GENERIC_MAX_HEALTH:
         min: -5
         max: 12
-        weight: 15
+        weight: 20
       GENERIC_KNOCKBACK_RESISTANCE:
         min: -0.2
         max: 0.8
-        weight: 10
-      GENERIC_FLYING_SPEED:
-        min: -3
-        max: 5
-        weight: 10
+        weight: 15
 
-  horse_armor:
+  horse_armor_v1:
     enabled: true
+    conditions:
+      - "v < 1.20.5"
     name: "Horse Armor"
     description:
       - "Any horse armor."
@@ -119,3 +121,120 @@ types:
         min: -0.5
         max: 1.2
         weight: 15
+  helmet_v2:
+    enabled: true
+    conditions:
+      - "v >= 1.20.5"
+      - "v < 1.21"
+    name: "Helmet"
+    description:
+      - "Any Slimefun helmet."
+    equipment-type: SLIMEFUN
+    check-material: true
+    materials:
+      - bump:head_slot
+    equipment-slots:
+      - HEAD
+    attributes:
+      GENERIC_ARMOR:
+        min: 0
+        max: 10
+        weight: 40
+      GENERIC_ARMOR_TOUGHNESS:
+        min: -2
+        max: 5
+        weight: 20
+      GENERIC_MAX_HEALTH:
+        min: -2
+        max: 6
+        weight: 20
+      GENERIC_KNOCKBACK_RESISTANCE:
+        min: -0.2
+        max: 0.4
+        weight: 10
+      GENERIC_FOLLOW_RANGE:
+        min: -25
+        max: 100
+        weight: 10
+  chestplate_v2:
+    enabled: true
+    conditions:
+      - "v >= 1.20.5"
+      - "v < 1.21"
+    name: "Chestplate"
+    description:
+      - "Any Slimefun chestplate."
+    equipment-type: SLIMEFUN
+    check-material: true
+    materials:
+      - bump:chest_slot
+    equipment-slots:
+      - CHEST
+    attributes:
+      GENERIC_ARMOR:
+        min: 0
+        max: 10
+        weight: 40
+      GENERIC_ARMOR_TOUGHNESS:
+        min: -2
+        max: 5
+        weight: 20
+      GENERIC_MAX_HEALTH:
+        min: -2
+        max: 6
+        weight: 20
+      GENERIC_KNOCKBACK_RESISTANCE:
+        min: -0.2
+        max: 0.4
+        weight: 20
+  leggings_v2:
+    enabled: true
+    conditions:
+      - "v >= 1.20.5"
+      - "v < 1.21"
+    name: "Leggings"
+    description:
+      - "Any Slimefun leggings."
+    equipment-type: SLIMEFUN
+    check-material: true
+    materials:
+      - bump:legs_slot
+    equipment-slots:
+      - LEGS
+    attributes:
+      GENERIC_ARMOR:
+        min: 0
+        max: 10
+        weight: 40
+      GENERIC_ARMOR_TOUGHNESS:
+        min: -2
+        max: 5
+        weight: 20
+      GENERIC_KNOCKBACK_RESISTANCE:
+        min: -0.2
+        max: 0.4
+        weight: 20
+      GENERIC_MOVEMENT_SPEED:
+        min: -0.1
+        max: 0.5
+        weight: 10
+      GENERIC_JUMP_STRENGTH:
+        min: -2
+        max: 6
+        weight: 10
+  boots_v2:
+    enabled: true
+    conditions:
+      - "v >= 1.20.5"
+      - "v < 1.21"
+    name: "Boots"
+    description:
+      - "Any Slimefun boots."
+    equipment-type: SLIMEFUN
+    check-material: true
+    materials:
+      - bump:feet_slot
+    equipment-slots:
+      - FEET
+    attributes:
+

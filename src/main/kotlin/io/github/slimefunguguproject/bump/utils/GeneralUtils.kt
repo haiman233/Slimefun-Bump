@@ -5,7 +5,6 @@ import net.guizhanss.guizhanlib.minecraft.utils.MinecraftVersionUtil
 import net.guizhanss.guizhanlib.minecraft.utils.compatibility.EnchantmentX
 import net.guizhanss.guizhanlib.utils.StringUtil
 import org.bukkit.Material
-import org.bukkit.enchantments.Enchantment
 import org.bukkit.inventory.ItemFlag
 import org.bukkit.inventory.ItemStack
 
@@ -14,18 +13,18 @@ object GeneralUtils {
     private const val STAR = "⭐"
 
     /**
-     * Get a [String] of consecutive stars, maximum at 10.
+     * Get a [String] of consecutive stars, maximum at 5.
      *
      *
-     * When there are over 10 stars, returns number + star.
+     * When there are over 5 stars, returns number + star.
      *
      * @param n The number of stars
      *
      * @return [String] of consecutive stars.
      */
     fun getStars(n: Byte): String {
-        var num = n
-        return if (num <= 10) {
+        return if (n <= 5) {
+            var num = n
             val builder = StringBuilder()
             while (num > 0) {
                 builder.append(STAR)
@@ -65,6 +64,7 @@ object GeneralUtils {
      * @return The material name in Simplified Chinese if GuizhanLibPlugin exists. Otherwise, in English.
      */
     fun getMaterialName(material: Material): String {
+        // TODO: Make an adapter for GuizhanLib 2.0 updates
         try {
             val clazz = Class.forName("net.guizhanss.guizhanlib.minecraft.helper.MaterialHelper")
             val result = clazz.getMethod("getName", Material::class.java).invoke(null, material)

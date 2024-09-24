@@ -10,7 +10,6 @@ import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.Unplaceabl
 import net.guizhanss.guizhanlib.minecraft.utils.compatibility.EnchantmentX
 import net.guizhanss.guizhanlib.utils.RandomUtil
 import org.bukkit.Material
-import org.bukkit.enchantments.Enchantment
 import org.bukkit.event.block.BlockBreakEvent
 import org.bukkit.inventory.ItemStack
 import kotlin.math.min

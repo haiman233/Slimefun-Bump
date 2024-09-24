@@ -8,18 +8,20 @@ import io.github.slimefunguguproject.bump.api.appraise.EquipmentType
 import io.github.slimefunguguproject.bump.core.BumpRegistry
 import io.github.slimefunguguproject.bump.utils.ConfigUtils
 import io.github.slimefunguguproject.bump.utils.GeneralUtils.valueOfOrNull
+import io.github.slimefunguguproject.bump.utils.checkConditions
 import io.github.slimefunguguproject.bump.utils.constant.Keys.createKey
 import org.bukkit.ChatColor
 import org.bukkit.Material
 import org.bukkit.attribute.Attribute
+import org.bukkit.attribute.AttributeModifier.Operation
 import org.bukkit.inventory.EquipmentSlot
 import java.util.logging.Level
 
 object AppraiseSetup {
 
     fun setup() {
-        setupTypes()
         setupStars()
+        setupTypes()
     }
 
     private fun setupTypes() {
@@ -39,6 +41,13 @@ object AppraiseSetup {
             }
 
             try {
+                // conditions first
+                val conditions = config.getStringList("$type.conditions")
+                if (!checkConditions(conditions)) {
+                    Bump.log(Level.INFO, "Appraise type \"$type\" is disabled due to conditions.")
+                    continue
+                }
+
                 // raw values
                 val name = config.getString("$type.name") ?: error("Missing name")
                 val description = config.getStringList("$type.description")
@@ -72,12 +81,18 @@ object AppraiseSetup {
                     val min = attributesSection.getDouble("$attr.min")
                     val max = attributesSection.getDouble("$attr.max")
                     val weightStr = attributesSection.getString("$attr.weight", "-1.0")!!
+                    val operationStr = attributesSection.getString("$attr.operation", "ADD_NUMBER")!!
                     val weight = try {
                         weightStr.toDouble()
-                    } catch (ex: NumberFormatException) {
+                    } catch (_: NumberFormatException) {
                         -1.0
                     }
-                    appraiseTypeBuilder.attribute(attribute, min, max, weight)
+                    val operation = try {
+                        Operation.valueOf(operationStr)
+                    } catch (_: IllegalArgumentException) {
+                        Operation.ADD_NUMBER
+                    }
+                    appraiseTypeBuilder.attribute(attribute, min, max, weight, operation)
                 }
 
                 val appraiseType = appraiseTypeBuilder.build(Bump.instance)
