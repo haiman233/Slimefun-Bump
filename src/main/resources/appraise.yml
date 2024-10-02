@@ -11,6 +11,7 @@ stars:
   30: 2
   10: 1
 types:
+# v < 1.20.5
   sword_v1:
     enabled: true
     conditions:
@@ -121,6 +122,9 @@ types:
         min: -0.5
         max: 1.2
         weight: 15
+
+# 1.20.5 <= v < 1.21
+
   helmet_v2:
     enabled: true
     conditions:
@@ -237,4 +241,140 @@ types:
     equipment-slots:
       - FEET
     attributes:
-
+      GENERIC_ARMOR:
+        min: 0
+        max: 30
+        weight: 40
+      GENERIC_ARMOR_TOUGHNESS:
+        min: -2
+        max: 12
+        weight: 25
+      GENERIC_MAX_HEALTH:
+        min: -5
+        max: 12
+        weight: 15
+      GENERIC_KNOCKBACK_RESISTANCE:
+        min: -0.2
+        max: 0.8
+        weight: 10
+      GENERIC_MOVEMENT_SPEED:
+        min: -0.1
+        max: 0.6
+        weight: 5
+      ENERIC_STEP_HEIGHT:
+        min: 0.6
+        max: 3
+        weight: 15
+  off_hand_slot_v2:
+    enabled: true
+    conditions:
+      - "v >= 1.20.5"
+      - "v < 1.21"
+    name: "OFF HAND SLOT"
+    description:
+      - "Any off hand tools."
+    equipment-type: ANY
+    check-material: true
+    materials:
+      - bump:off_hand_slot
+    equipment-slots:
+      - OFF_HAND
+    attributes:
+      GENERIC_ARMOR_TOUGHNESS:
+        min: -2
+        max: 12
+        weight: 30
+      GENERIC_MAX_HEALTH:
+        min: -5
+        max: 12
+        weight: 20
+      GENERIC_KNOCKBACK_RESISTANCE:
+        min: -0.2
+        max: 0.8
+        weight: 15
+      GENERIC_MOVEMENT_SPEED:
+        min: -0.1
+        max: 0.6
+        weight: 15
+      GENERIC.MAX_ABSORPTION:
+        min: 4
+        max: 8
+        weight: 20
+  hand_slot_v2:
+    enabled: true
+    conditions:
+      - "v >= 1.20.5"
+      - "v < 1.21"
+    name: "Boots"
+    description:
+      - "Any tools or swords."
+    equipment-type: ANY
+    check-material: true
+    materials:
+      - bump:hand_slot
+    equipment-slots:
+      - HAND
+    attributes:
+      GENERIC_ATTACK_SPEED:
+        min: 0.2
+        max: 1
+        weight: 15
+      GENERIC_ENTITY_INTERACTION_RANGE:
+        min: 1
+        max: 10
+        weight: 15
+      GENERIC_ATTACK_DAMAGE:
+        min: 10
+        max: 25
+        weight: 15
+      GENERIC_BLOCK_INTERACTION_RANGE:
+        min: 4.5
+        max: 12
+        weight: 45
+      GENERIC_ATTACK_KNOCKBACK:
+        min: 4
+        max: 8
+        weight: 10
+  mob_armor_v2:
+    enabled: true
+    conditions:
+      - "v >= 1.20.5"
+      - "v < 1.21"
+    name: "Boots"
+    description:
+      - "Any horse/wolf armors and carpets/saddles."
+    equipment-type: ANY
+    check-material: true
+    materials:
+      - bump:mob_armor
+    equipment-slots:
+      - CHEST
+    attributes:
+      GENERIC_MAX_HEALTH:
+        min: 0
+        max: 30
+        weight: 30
+      GENERIC_ARMOR:
+        min: -5
+        max: 30
+        weight: 10
+      GENERIC_ARMOR_TOUGHNESS:
+        min: -2
+        max: 12
+        weight: 10
+      GENERIC_KNOCKBACK_RESISTANCE:
+        min: -0.2
+        max: 0.8
+        weight: 10
+      GENERIC_JUMP_STRENGTH:
+        min: -0.5
+        max: 1.4
+        weight: 20
+      GENERIC_MOVEMENT_SPEED:
+        min: -0.5
+        max: 1.2
+        weight: 10
+      GENERIC_ATTACK_DAMAGE:
+        min: 5.5
+        max: 18
+        weight: 10
