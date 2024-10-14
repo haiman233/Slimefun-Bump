@@ -1,0 +1,385 @@
+---
+categories:
+  main: "&bBump"
+  armor: "&bBump - Giáp"
+  food: "&bBump - Thực Phẩm"
+  machine: "&bBump - Máy Móc"
+  stuff: "&bBump - Đồ Lặt Vặt"
+  tool: "&bBump - Công Cụ"
+  weapon: "&bBump - Vũ Khí Ma Thuật"
+  appraise_info: "&eBump - Thông Tin Đánh Giá"
+  wiki: "&eBump - Wiki"
+items:
+  random_helmet:
+    name: "&6Mũ Ngẫu Nhiên"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oXổ số kiến thiết..."
+      - "&b&k|&b- &e&oMáy Đánh Giá sẽ &7&ongẫu nhiên cho thuộc tính này..."
+  random_horse_armor:
+    name: "&6Giáp Ngựa Ngẫu Nhiên"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oXổ số kiến thiết..."
+      - "&b&k|&b- &e&oMáy Đánh Giá sẽ &7&ongẫu nhiên cho thuộc tính này..."
+  xuebi:
+    name: "&6Sprite"
+    lore:
+      - ""
+      - "&b&k|&b- Ngọt rất ngọt, ga rất ga!"
+      - ""
+  kele:
+    name: "&eCola"
+    lore:
+      - ""
+      - "&b&k|&b- Uống sẽ có cảm giác lâng lâng!"
+      - ""
+  fangbianmian:
+    name: "&eMì Gói Master Kong"
+    lore:
+      - ""
+      - "&b&k|&b- Chua cay!"
+      - ""
+  latiao:
+    name: "&eQue Cay"
+    lore:
+      - ""
+      - "&b&k|&b- Ăn bẩn sống lâu..."
+      - ""
+  kouxiangtang:
+    name: "&eKẹo Cao Su"
+    lore:
+      - ""
+      - "&b&k|&b- Siêu dính..."
+      - ""
+  zongzi:
+    name: "&aBánh Ú"
+    lore:
+      - ""
+      - "&b&k|&b- Mừng Tết Đoan Ngọ!"
+      - ""
+  appraisal:
+    name: "&bCông Cụ Đánh Giá"
+    lore:
+      - ""
+      - "&c&k|&7- Hỏng rồi thì phải..."
+      - ""
+  attribute_grindstone:
+    name: "&bĐá Mài Thuộc Tính"
+    lore:
+      - ""
+      - "&c&k|&7- Có thể xóa thuộc tính của vật phẩm..."
+      - ""
+  sun_energy:
+    name: "&eNăng Lượng Quang Hợp"
+    lore:
+      - ""
+      - "&b&k|&b- Cây đột biến cũng sẽ quang hợp..."
+      - ""
+  mecha_gear:
+    name: "&eBánh Răng Cơ Khí"
+    lore:
+      - ""
+      - "&b&k|&b- Sản phẩm lỗi của một nhà máy lớn nào đó..."
+      - ""
+  old_coin:
+    name: "&eĐồng Tiền Vàng Hỏng"
+    lore:
+      - ""
+      - "&b&k|&b- Mua gì được giờ..."
+      - ""
+  make:
+    name: "&eLõi Công Nghệ Máy Tính"
+    lore:
+      - ""
+      - "&b&k|&b- Cái này dùng để làm gì..."
+      - ""
+  old_cpu:
+    name: "&eCPU Hỏng"
+    lore:
+      - ""
+      - "&b&k|&b- Lấy được từ máy tính ai đây..."
+      - ""
+  cpu:
+    name: "&eCPU"
+    lore:
+      - ""
+      - "&b&k|&b- Nguyên vẹn..."
+      - ""
+  soul_paper:
+    name: "&eBùa Linh Hồn"
+    lore:
+      - ""
+      - "&b&k|&b- Sức mạnh linh hồn"
+      - ""
+  ksf_stuff:
+    name: "&eGói Gia Vị Mì Gói"
+    lore:
+      - ""
+      - "&b&k|&b- Chua cay bỏ túi"
+      - ""
+  water_sugar:
+    name: "&eKẹo Soda"
+    lore:
+      - ""
+      - "&b&k|&b- Sprite? Hay Coca-Cola?"
+      - ""
+  peach_wood:
+    name: "&eGỗ Đào"
+    lore:
+      - ""
+      - "&b&k|&b- Xua đuổi tà mà"
+      - ""
+  update_power:
+    name: "&eLõi Nâng Cấp"
+    lore:
+      - ""
+      - "&b&k|&b- Dùng để nâng cấp một số thứ kì lạ..."
+      - ""
+  compressed_random_equipment:
+    name: "&eTrang Bị Ngẫu Nhiên Nén"
+    lore:
+      - ""
+      - "&b&k|&b- Thôi khỏi dùng được nữa rồi..."
+      - ""
+  getgold_spade:
+    name: "&eXẻng Đào Vàng"
+    lore:
+      - ""
+      - "&b&k|&b- Có tỉ lệ đào ra Đồng Tiền Vàng Hỏng khi đào cát!"
+      - ""
+  quality_identifier:
+    name: "&eMáy Kiểm Định Chất Lượng"
+    lore:
+      - ""
+      - "&b&k|&b- Thêm vài thuộc tính ngẫu nhiên cho những vật phẩm hợp lệ!"
+      - "&b&k|&b- Rất đắt, dùng cẩn thận..."
+      - ""
+  appraisal_paper_armor:
+    name: "&eMáy Kiểm Định Chất Lượng Giáp"
+    lore:
+      - ""
+      - "&b&k|&b- Thêm vài thuộc tính giáp ngẫu nhiên cho những vật phẩm hợp lệ!"
+      - "&b&k|&b- Rất đắt, dùng cẩn thận..."
+      - ""
+  appraisal_paper_damage:
+    name: "&eMáy Kiểm Định Chất Lượng Vũ Khí"
+    lore:
+      - ""
+      - "&b&k|&b- Thêm vài thuộc tính vũ khí ngẫu nhiên cho những vật phẩm hợp lệ!"
+      - "&b&k|&b- Rất đắt, dùng cẩn thận..."
+      - ""
+  appraisal_paper_horse_armor:
+    name: "&eMáy Kiểm Định Chất Lượng Giáp Ngựa"
+    lore:
+      - ""
+      - "&b&k|&b- Thêm vài thuộc tính giáp ngẫu nhiên cho những vật phẩm hợp lệ!"
+      - "&b&k|&b- Rất đắt, dùng cẩn thận..."
+      - ""
+  light_bow:
+    name: "&6Cung Thiên Trị"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oChấp nhận hình phạt của Chúa..."
+      - ""
+  witherskull_bow:
+    name: "&6Cung Khô Héo"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oBắn ra mọi loại mob Undead..."
+      - ""
+  emer_sword:
+    name: "&6Kiếm Lục Bảo"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oĐược làm từ lục bảo đắt tiền..."
+      - ""
+  bone_sword:
+    name: "&6Kiếm Xương"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oRất cứng..."
+      - ""
+  random_sword:
+    name: "&6Kiếm Ngắn Ngẫu Nhiên"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oXổ số kiến thiết..."
+      - "&b&k|&b- &e&oMáy Đánh Giá &7&osẽ ngẫu nhiên cho thuộc tính này..."
+  guard_sword:
+    name: "&6Kiếm Hộ Vệ"
+    lore:
+      - ""
+      - "&b&k|&b- &7&o\"Ta sẽ bảo vệ ngươi đến giây phút cuối cùng.\""
+      - ""
+  peach_sword:
+    name: "&6Kiếm Gỗ Đào"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oTôn vinh một bộ phim zombie nào đó..."
+      - ""
+  soul_sword:
+    name: "&6Kiếm Linh Hồn"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oLinh hồn quỷ dữ trú ngụ bên trong..."
+      - "&b&k|&b- &e&oChuột phải &7&ođể phát ra một tiếng gầm..."
+      - "&b&k|&b- &7&oBiến &e&othanh đói &7&ocủa bạn thành &e&omáu&7&o..."
+      - ""
+  sky_sword:
+    name: "&6Kiếm Nghịch Thiên"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oThiên thượng thiên hạ, duy ngã độc tôn."
+      - "&b&k|&b- &e&oChuột phải &7&ođể phóng bản thân lên trời..."
+      - ""
+  devil_sword:
+    name: "&6Kiếm Sát Quỷ"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oThắp lửa con tim, bứt phá giới hạn."
+      - "&b&k|&b- &e&oChuột phải &7&ođể gọi ra lửa thiêng, loại trừ cái ác..."
+      - ""
+  sky_devil_sword:
+    name: "&6Kiếm Nghịch Thiên-Quỷ"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oPhá thiên, trảm quỷ, từng đường kiếm bùng phát năng lượng cuồng bạo..."
+      - "&b&k|&b- &e&oChuột phải &7&ođể phóng ra 3 hơi thở rồng về phía trước và cường hóa bản thân..."
+      - ""
+lores:
+  per-use: "&7mỗi lần sử dụng"
+  not-appraised: "&b&k|&b- &7&oChưa được đánh giá"
+  appraised: "&b&k|&b- &7&oĐã đánh giá &b| &dCấp: &e&|{0}"
+  click-to-open: "&7\u21E8 &aBấm để mở"
+  any-random-equipment: "&fTrang bị ngẫu nhiên bất kì"
+recipes:
+  compressor_mock:
+    name: "&bMáy Nén"
+    lore:
+      - "&7Chế tạo vật phẩm này theo mẫu"
+      - "&7sử dụng Máy Nén"
+researches:
+  food: "Thực phẩm Bump"
+  random_equipment: "Trang bị ngẫu nhiên"
+  appraise: "Đánh giá"
+  stuff: "Đồ ma thuật"
+  old_stuff: "Lấy vàng"
+  bow: "Cung Bump"
+  peach_sword: "Kiếm gỗ đào"
+  normal_sword: "Kiếm thường"
+  soul_sword: "Kiếm linh hồn"
+  sky_devil: "Thiên hoặc Quỷ"
+messages:
+  no-permission: "&cBạn không có quyền."
+  no-input: "&cXin hãy cho vật phẩm vào."
+  output-no-space: "&cĐầu ra đầy!"
+  not-enough-power: "&cKhông đủ năng lượng."
+  stacked: "&cBạn không thể dùng vật phẩm này khi nó đang trong 1 stack."
+  legacy: "&cBạn đang dùng một vật phẩm lỗi thời. Bạn cần nâng cấp nó."
+  deprecated: "&cBạn đang dùng một vật phẩm bị cấm. Nó sẽ bị xóa."
+  click-here: "&eBấm vào đây:"
+  food:
+    cooldown: "&b&k|&b- &7&oBạn cần đợi một lúc để ăn tiếp!"
+    xuebi: "&b&k|&b- &7&oMùa hè mát mẻ!"
+    kele: "&b&k|&b- &7&oLà wibu thật tuyệt!"
+    fangbianmian: "&b&k|&b- &7&oVị của tuổi thơ!"
+    latiao: "&b&k|&b- &7&oCay vừa vừa!"
+    kouxiangtang: "&b&k|&b- &7&oTinh linh bay phấp phới!"
+    zongzi: "&b&k|&b- &7&oNgọt hay chua?"
+  tool:
+    getgold_spade: "&b&k|&b- &7&oVãi Chu Bin, vàng..."
+    appraisal_paper:
+      legacy: "&bMáy Kiểm Định Chất Lượng lỗi thời của bạn đã được nâng cấp."
+      invalid: "&cVật phẩm này không thể được đánh giá!"
+      success: "&aVật phẩm này có thể được đánh giá!"
+  weapon:
+    unavailable: "&b&k|&b- &7&oBạn không thể dùng kĩ năng này bây giờ!"
+    low-food-level: "&b&k|&b- &7&oBạn không có đủ thanh đói để chuyển thành máu!"
+    cooldown: "&b&k|&b- &7&oBạn cần đợi một lúc để dùng kĩ năng vũ khí lần nữa!"
+    soul_sword:
+      converted-part: "&b&k|&b- &7&oMột phần thanh đói của bạn đã được chuyển thành máu!"
+      converted-all: "&b&k|&b- &7&oToàn bộ thanh đói của bạn đã được chuyển thành máu!"
+    devil_sword: "&b&k|&b- &7&oHơi thở của lửa Bí Kĩ, thức thứ chín: Luyện Ngục!"
+    sky_sword:
+      activated: "&b&k|&b- &7&oXin lỗi nhé, Amanai..."
+      protected: "&b&k|&b- &7&oKiếm Nghịch Thiên đã bảo vệ bạn khỏi sát thương rơi!"
+    sky_devil_sword:
+      activated: "&b&k|&b- &7&oSát Quỷ hay Nghịch Thiên, phục tùng công lý!"
+      deactivated: "&b&k|&b- &7&oHiệu ứng cường hóa đã hết tác dụng!"
+    light_bow: "&b&k|&b- &7&oTrừng phạt!"
+    wither_skull_bow: "&b&k|&b- &7&oKhô héo!"
+  machine:
+    appraisal:
+      invalid: "&cVật phẩm này không thể được đánh giá!"
+      not-accepted: "&cLoại đánh giá này không phù hợp với vật phẩm."
+      appraised: "&cVật phẩm không xác định hoặc đã được đánh giá!"
+      success: "&aĐánh giá!"
+    attribute-grindstone:
+      invalid: "&cVật phẩm này chưa được đánh giá."
+      success: "&aKết quả đánh giá đã bị xóa!"
+console:
+  loading-appraise-types: "Đang tải loại đánh giá từ config."
+  loading-appraise-type: "Đang tải loại đánh giá \"{0}\"."
+  disabled-appraise-type: "Loại đánh giá \"{0}\" đã bị tắt, bỏ qua."
+  loaded-appraise-type: "Đã tải loại đánh giá \"{0}\"."
+  error-loading-appraise-type: "Lỗi xảy ra khi đang tải loại đánh giá \"{0}\": {1}"
+  missing-appraise-stars: "Phần config 'appraise.stars' bị thiếu."
+  use-default-appraise-stars: "Sử dụng cài đặt sao đánh giá mặc định."
+  invalid-appraise-stars: "Bạn chỉ có thể đặt sao đánh giá từ 0 đến 127!"
+  error-sound: "Lỗi xảy ra khi đang tải loại config âm thanh: {0}"
+  invalid-sound-config: "Không thể tìm thấy config âm thanh cho BumpSound: {0}"
+  invalid-sound-volume: "Âm lượng không hợp lệ cho BumpSound \"{0}\": {1} (ít nhất phải là {2})"
+  invalid-sound-pitch: "Cao độ không hợp lệ cho BumpSound \"{0}\": {1} (ít nhất phải là {2})"
+gui:
+  appraise:
+    name: "&eBấm để đánh giá"
+    lore:
+      - "&7<- Đặt vật phẩm muốn đánh giá xuống ô bên trái"
+      - "&7Bấm để đánh giá"
+  appraise_type_selector:
+    name: "&bLoại: &e{0}"
+    lore:
+      - ""
+      - "&7Xem chi tiết trong danh mục của Bump"
+      - "&eBấm để chọn loại"
+  appraise_type_selector_menu:
+    title: "&6Chọn loại đánh giá"
+    lore:
+      - ""
+      - "&eBấm để chọn loại này"
+  appraisal_paper:
+    name: "&eBấm để áp dụng"
+    lore:
+      - "&7<- Đặt các vật phẩm xuống phía bên trái"
+      - "&7Bấm để cho phép đánh giá vật phẩm này"
+  grind:
+    name: "&eBấm để xóa các thuộc tính"
+    lore:
+      - "&7<- Đặt các vật phẩm đã được đánh giá xuống phía bên trái"
+      - "&eBấm để xóa các thuộc tính"
+appraise_info:
+  name: "&bLoại đánh giá: &e{0}"
+  click: "&eNhấn vào đây để xem chi tiết"
+  equipment_type:
+    name: "&aLoại trang bị phù hợp: &b{0}"
+    any: "&7Mọi vật phẩm"
+    vanilla: "&7Chỉ vật phẩm Vanilla"
+    slimefun: "&7Chỉ vật phẩm Slimefun"
+  material:
+    name: "&aKiểm tra chất liệu của trang bị: &b{0}"
+    lore_enabled:
+      - "&7Chỉ những chất liệu sau là phù hợp:"
+    lore_enabled_more: "&7Và {0} nữa..."
+    lore_disabled:
+      - "&7Chất liệu sẽ không được kiểm tra."
+  equipment_slot:
+    name: "&aÔ trang bị"
+    lore:
+      - "&7Thuộc tính sẽ được áp dụng"
+      - "&7với (các) ô trang bị:"
+  attribute:
+    name: "&eThuộc tính: &9{0}"
+    range: "&7Phạm vi: &b{0} &7~&b{1}"
+    weight: "&7Giá trị: &b{0}%"
+

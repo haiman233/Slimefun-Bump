@@ -134,6 +134,12 @@ items:
       - ""
       - "&b&k|&b- Há uma certa chance de desenterrar moedas de ouro quebradas na areia!"
       - ""
+  quality_identifier:
+    lore:
+      - ""
+      - ""
+      - "&b&k|&b- Muito caro, certifique-se de mantê-lo..."
+      - ""
   appraisal_paper_armor:
     name: "&eIdentificador de Qualidade de Armadura"
     lore:

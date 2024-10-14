@@ -16,4 +16,13 @@ items:
       - ""
   random_horse_armor:
     name: "&6Rastgele At Zırhı"
+    lore:
+      - ""
+      - "&b&k|&b- &7&oŞansım nasıl..."
+      - ""
+  random_sword:
+    lore:
+      - ""
+      - "&b&k|&b- &7&oŞansım nasıl..."
+      - ""
 

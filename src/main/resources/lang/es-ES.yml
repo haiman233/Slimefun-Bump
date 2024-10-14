@@ -76,6 +76,11 @@ items:
     name: "&eCPU"
   ksf_stuff:
     name: "&eCondimento para fideos instantáneos"
+  random_sword:
+    lore:
+      - ""
+      - "&b&k|&b- &7&oCómo es mi suerte..."
+      - "&b&k|&b- &e&oEl tasador &7&oadjudica este atributo de forma aleatoria..."
 researches:
   food: "Alimento de Bump"
 

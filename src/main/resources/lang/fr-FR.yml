@@ -36,4 +36,9 @@ items:
       - ""
   appraisal_paper_armor:
     name: "&eIdentificateur de qualité d'armure"
+  random_sword:
+    lore:
+      - ""
+      - "&b&k|&b- &7&oQuelle est ma chance..."
+      - "&b&k|&b- &e&oL'évaluateur &7&odonne cet aléatoire attribut..."
 
